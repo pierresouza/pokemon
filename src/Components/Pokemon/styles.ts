@@ -3,26 +3,61 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-
-  input {
-    max-width: 16rem;
-    text-align: center;
-  }
 `;
+
 export const Content = styled.div`
-  /* border: 1px solid #ff0000; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1.5rem;
   margin-top: 2rem;
+  padding: 0 10rem;
 `;
 export const Item = styled.button`
-  background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.25rem;
   border: 0;
-  text-align: center;
-  padding: 0.25rem;
   border-radius: 0.5rem;
+  background-color: #dcdcdc;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  max-width: 14rem;
+  max-height: 14rem;
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
 `;
 
-export const InputSearch = styled.input``;
+export const InputSearch = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div {
+    margin-top: 2rem;
+    border: #000;
+    opacity: 0.5;
+    input {
+      border-radius: 1rem;
+      padding: 0.5rem 0;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background: #b0c4de;
+      }
+
+      ::placeholder {
+        padding: 0.75rem;
+      }
+    }
+  }
+
+  img {
+    height: 6rem;
+  }
+`;

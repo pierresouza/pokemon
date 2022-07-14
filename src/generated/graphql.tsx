@@ -51726,7 +51726,8 @@ export const PokemonsDocument = gql`
     query Pokemons {
   gen3_species: pokemon_v2_pokemonspecies(
     where: {pokemon_v2_generation: {name: {_eq: "generation-iii"}}}
-    order_by: {id: asc}
+    order_by: {id: asc, name: asc}
+    limit: 50
   ) {
     name
     id

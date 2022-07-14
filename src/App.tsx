@@ -10,7 +10,6 @@ export function App() {
     <Container>
       <ApolloProvider client={client}>
         <GlobalStyles />
-        <h1>Pokemons :</h1>
         <Pokemon />
       </ApolloProvider>
     </Container>
