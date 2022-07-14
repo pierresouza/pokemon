@@ -6,34 +6,13 @@ import { Container, Content, Item, InputSearch } from "./styles";
 
 export const Pokemon = () => {
   const { data } = usePokemonsQuery();
-  const [Data, setData] = useState([]);
-  const [inputValue, setInputValue] = useState("");
-  const [currentSearch, setCurrentSearch] = useState([]);
-
-  const handleSearch = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  useEffect(() => {
-    if (Data && Data.length) {
-      const result = Data.filter((item) =>
-        item.name.toLowerCase.includes(inputValue.toLocaleLowerCase())
-      );
-      setCurrentSearch(result);
-    }
-  }, [Data, inputValue]);
 
   return (
     <Container>
       <InputSearch>
         <img src={logo} alt="" />
         <div>
-          <input
-            type="text"
-            placeholder="digite o nome de um pokemon"
-            value={inputValue}
-            onChange={handleSearch}
-          />
+          <input type="text" placeholder="digite o nome de um pokemon" />
         </div>
       </InputSearch>
 

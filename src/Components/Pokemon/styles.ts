@@ -44,15 +44,15 @@ export const InputSearch = styled.div`
     border: #000;
     opacity: 0.5;
     input {
-      border-radius: 1rem;
-      padding: 0.5rem 0;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      width: 14rem;
       transition: all 0.5s ease-in-out;
       &:hover {
         background: #b0c4de;
       }
-
       ::placeholder {
-        padding: 0.75rem;
+        text-align: center;
       }
     }
   }
