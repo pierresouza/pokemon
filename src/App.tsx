@@ -9,11 +9,11 @@ import { GlobalStyles } from "./Styles/GlobalStyles";
 
 export function App() {
   return (
-    <Container>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+      <Container>
         <GlobalStyles />
         <Pokemon />
-      </ApolloProvider>
-    </Container>
+      </Container>
+    </ApolloProvider>
   );
 }
