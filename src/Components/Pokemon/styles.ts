@@ -50,7 +50,6 @@ export const InputSearch = styled.div`
       &:focus {
         color: #000000;
         background: #b0c4de;
-        font-weight: bold;
       }
       ::placeholder {
         text-align: center;
