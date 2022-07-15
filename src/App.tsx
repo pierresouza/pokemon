@@ -1,7 +1,9 @@
-import { ApolloProvider } from "@apollo/client";
 import React from "react";
-import { Pokemon } from "./Components/Pokemon";
+
 import { client } from "./services/api";
+import { Pokemon } from "./Components/Pokemon";
+import { ApolloProvider } from "@apollo/client";
+
 import { Container } from "./style";
 import { GlobalStyles } from "./Styles/GlobalStyles";
 

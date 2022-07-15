@@ -42,14 +42,15 @@ export const InputSearch = styled.div`
   > div {
     margin-top: 2rem;
     border: #000;
-    opacity: 0.5;
     input {
+      width: 14rem;
       border-radius: 0.5rem;
       padding: 0.5rem 0.75rem;
-      width: 14rem;
       transition: all 0.5s ease-in-out;
-      &:hover {
+      &:focus {
+        color: #000000;
         background: #b0c4de;
+        font-weight: bold;
       }
       ::placeholder {
         text-align: center;

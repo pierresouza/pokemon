@@ -12,7 +12,7 @@ export const Pokemon = () => {
       <InputSearch>
         <img src={logo} alt="" />
         <div>
-          <input type="text" placeholder="digite o nome de um pokemon" />
+          <input type="text" placeholder="Search Pokemon" />
         </div>
       </InputSearch>
 
