@@ -5,9 +5,12 @@ import { usePokemonsQuery } from "../../generated/graphql";
 import { Container, Content, Item, InputSearch } from "./styles";
 
 export const Pokemon = () => {
-  const [pokemonName, setPokemonName] = useState("");
+  const [search, setSearch] = useState("");
   const { data } = usePokemonsQuery();
-  console.log("🚀 ~ file: index.tsx ~ line 10 ~ Pokemon ~ data", data);
+
+  const pokemonsFiltrados = data?.gen3_species.filter((pokemon) =>
+    pokemon.name.includes(search)
+  );
 
   return (
     <Container>
@@ -17,28 +20,19 @@ export const Pokemon = () => {
           <input
             type="text"
             placeholder="Search Pokemon"
-            onChange={(e) => setPokemonName(e.target.value)}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </div>
       </InputSearch>
 
       <Content>
-        {pokemonName.trim().length == 0
-          ? data?.gen3_species.map(({ id, name }) => (
-              <Item key={id}>
-                {name}
-                <img src={pokeball} alt="" />
-              </Item>
-            ))
-          : data?.gen3_species?.map(
-              (pokemon) =>
-                pokemon?.name === pokemonName && (
-                  <Item key={pokemon?.id}>
-                    {pokemon?.name}
-                    <img src={pokeball} alt="" />
-                  </Item>
-                )
-            )}
+        {pokemonsFiltrados?.map(({ id, name }) => (
+          <Item key={id}>
+            <img src={pokeball} alt="" />
+            {name}
+          </Item>
+        ))}
       </Content>
     </Container>
   );
