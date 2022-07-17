@@ -8,8 +8,10 @@ export const Pokemon = () => {
   const [search, setSearch] = useState("");
   const { data } = usePokemonsQuery();
 
+  const lowerBusca = search.toLowerCase();
+
   const pokemonsFiltrados = data?.gen3_species.filter((pokemon) =>
-    pokemon.name.includes(search.toLowerCase())
+    pokemon.name.toLowerCase().includes(lowerBusca)
   );
 
   return (
