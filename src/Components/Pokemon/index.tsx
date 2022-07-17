@@ -9,7 +9,7 @@ export const Pokemon = () => {
   const { data } = usePokemonsQuery();
 
   const pokemonsFiltrados = data?.gen3_species.filter((pokemon) =>
-    pokemon.name.includes(search)
+    pokemon.name.includes(search.toLowerCase())
   );
 
   return (
