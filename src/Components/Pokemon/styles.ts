@@ -7,8 +7,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.5rem 0.5rem;
   margin-top: 2rem;
   padding: 0 10rem;
 `;
@@ -16,14 +16,13 @@ export const Item = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 10rem;
   padding: 0.75rem 0.25rem;
   border: 0;
   border-radius: 0.5rem;
   background-color: #dcdcdc;
   cursor: pointer;
   transition: all 0.6s ease-in-out;
-  max-width: 14rem;
-  max-height: 14rem;
   &:hover {
     transform: scale(1.1);
     opacity: 0.7;
